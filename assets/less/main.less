@@ -1,0 +1,71 @@
+// body 基础样式
+body {
+  min-width: 1440px;
+  background-color: @main-bg-color !important;
+}
+
+#__nuxt {
+  height: 100%;
+}
+
+#__layout {
+  height: 100%;
+}
+
+// iconfont 基础样式
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+// 渐变底部分隔线
+.gradient-border-bottom:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: radial-gradient(#dfdfdf 0%, white 95%);
+}
+
+// 路由切换效果
+.page-enter-active,
+.page-leave-active {
+  .transition(opacity);
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+/******************** 滚动条样式开始 ********************/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 100%, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/******************** 滚动条样式结束 ********************/
+
+// 通过纯色的内阴影覆盖 Chrome 浏览器表单自动填充默认样式
+input:-webkit-autofill,
+input:-internal-autofill-selected {
+  box-shadow: 0 0 0 1000px white inset;
+}

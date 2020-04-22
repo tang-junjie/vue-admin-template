@@ -1,0 +1,76 @@
+/******************** 文本样式控制 ********************/
+
+// 单行溢出隐藏
+.text-ellipsis() {
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 多行溢出隐藏
+.text-ellipsis-multi-line(@line: 2) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+}
+
+// 垂直居中
+.text-vertical-align(@height: 0) {
+  line-height: @height;
+  height: @height;
+}
+
+/******************** 对齐样式控制 ********************/
+
+// flex 对齐
+.flex(@horizontal: center, @vertical: center, @direction: row) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @horizontal;
+  align-items: @vertical;
+}
+
+// 绝对居中
+.absolute-center(@type: absolute, @offsetX: -50%, @offsetY: -50%) {
+  position: @type;
+  top: 50%;
+  left: 50%;
+  transform: translate(@offsetX, @offsetY);
+}
+
+/******************** 动画样式控制 ********************/
+
+// 动画过渡，注意；为了提升渲染性能，建议指明使用动画的属性
+.transition(
+  @property: all,
+  @duration: 0.2s,
+  @timing-function: ease-in-out,
+  @delay: 0s
+) {
+  transition: @property @duration @timing-function @delay;
+}
+
+/********************* 颜色枚举 *********************/
+.color-table {
+  &.red {
+    background-color: @color-red;
+  }
+
+  &.orange {
+    background-color: @color-orange;
+  }
+
+  &.green {
+    background-color: @color-green;
+  }
+
+  &.blue {
+    background-color: @color-primary;
+  }
+
+  &.gray {
+    background-color: @text-color-2;
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "editor.rulers": [
+        80
+    ],
+    "editor.tabSize": 2,
+    "editor.minimap.enabled": true,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "files.insertFinalNewline": true,
+    "path-intellisense.mappings": {
+        "@": "${workspaceRoot}"
+    },
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.activeBackground": "#00ffff"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
